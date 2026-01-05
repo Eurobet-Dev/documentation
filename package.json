@@ -1,0 +1,21 @@
+{
+  "name": "@eurobet/cache-handler",
+  "version": "1.0.0",
+  "description": "Cache handler implementation with Redis support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": ["cache", "redis", "handler"],
+  "author": "Eurobet",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "redis": "^4.6.0"
+  }
+}
