@@ -80,7 +80,12 @@ export class Cache {
         return null;
       }
 
-      return JSON.parse(value) as T;
+      try {
+        return JSON.parse(value) as T;
+      } catch (parseError) {
+        logger.error(`Error parsing cached value for key '${key}': ${parseError}`);
+        return null;
+      }
     } catch (error) {
       logger.error(`Error getting cache key '${key}': ${error}`);
       return null;

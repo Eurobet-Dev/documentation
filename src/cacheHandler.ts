@@ -23,7 +23,7 @@ export const CacheHandler = async <T>(
 
     const data = await fetcher();
 
-    cache.set(key, data, { EX: ttl });
+    await cache.set(key, data, { EX: ttl });
     return data;
   } catch (error) {
     logger.error(`[CacheHandler] Error in cache handler for key '${key}': ${error}`);
