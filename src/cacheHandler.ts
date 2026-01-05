@@ -14,7 +14,7 @@ export const CacheHandler = async <T>(
   ttl: number
 ): Promise<T> => {
   try {
-    const cache = new Cache();
+    const cache = Cache.getInstance();
     const cached = await cache.get<T>(key);
 
     if (cached) {
